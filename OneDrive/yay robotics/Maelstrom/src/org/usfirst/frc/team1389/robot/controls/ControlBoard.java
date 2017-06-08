@@ -6,7 +6,6 @@ import com.team1389.hardware.inputs.software.PercentIn;
 
 public class ControlBoard {
 	private final LogitechExtreme3D driveController = new LogitechExtreme3D(0);
-	
 	public PercentIn driveYAxis() {
 		return driveController.yAxis().applyDeadband(.075).invert();
 	}

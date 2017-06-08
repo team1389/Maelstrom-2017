@@ -17,9 +17,9 @@ public class RobotMap {
 	protected final PWM pwm_LEFT_MIDDLE_MOTOR = new PWM(1);
 	protected final PWM pwm_LEFT_BACK_MOTOR = new PWM(2);
 	
-	protected final boolean inv_LEFT_FRONT_MOTOR = false;
-	protected final boolean inv_LEFT_MIDDLE_MOTOR = false;
-	protected final boolean inv_LEFT_BACK_MOTOR = false;
+	protected final boolean inv_LEFT_FRONT_MOTOR = true;
+	protected final boolean inv_LEFT_MIDDLE_MOTOR = true;
+	protected final boolean inv_LEFT_BACK_MOTOR = true;
 	
 	
 

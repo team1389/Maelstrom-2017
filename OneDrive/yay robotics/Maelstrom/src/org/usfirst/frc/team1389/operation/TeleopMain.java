@@ -1,6 +1,5 @@
 package org.usfirst.frc.team1389.operation;
 
-
 import org.usfirst.frc.team1389.robot.RobotSoftware;
 import org.usfirst.frc.team1389.robot.controls.ControlBoard;
 
@@ -13,16 +12,16 @@ public class TeleopMain {
 	DigitalIn timeRunning;
 	RobotSoftware robot;
 	ControlBoard controls;
-	
-	public TeleopMain(RobotSoftware robot){
+
+	public TeleopMain(RobotSoftware robot) {
 		this.robot = robot;
-		manager = new SystemManager(new CurvatureDriveSystem(robot.drive, controls.driveYAxis(), controls.driveXAxis(), controls.driveModeBtn()));
+		controls = new ControlBoard();
+		manager = new SystemManager(new CurvatureDriveSystem(robot.drive.getAsTank(), controls.driveYAxis(),
+				controls.driveXAxis(), controls.driveModeBtn()));
 	}
-	
-	
+
 	public void update() {
 		manager.update();
 	}
-
 
 }
